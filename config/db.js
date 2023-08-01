@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+mongoose.connect(config.DB,{ useNewUrlParser: true }));
 const connectDB=async()=>{
     try {
         const conn=await mongoose.connect(process.env.MONGO_URL);
